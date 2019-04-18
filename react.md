@@ -100,3 +100,42 @@ class HelloWorld extends React.Component {
 </body>
 </html>
 ```
+
+## Day 4: Complex Components
+
+- 將一個複雜的 component 拆解成多個簡單的，再組合起來
+
+```html
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    class App extends React.Component {
+      render() {
+        return (
+          <div className="notificationsFrame">
+            <div className="panel">
+              {/* content (DOM component) goes here */}
+              <Header />
+              <Content />
+            </div>
+          </div>
+        )
+      }
+    }
+    class Header extends React.Component {
+      render() {
+        return (
+          {/* Header content goes here */}
+        )
+      }
+    }
+    class Content extends React.Component {
+      render() {
+        return (
+          {/* Content content goes here */}
+        )
+      }
+    }
+  </script>
+</body>
+```
